@@ -49,7 +49,7 @@ set_new_config() has been renamed reconfig()
 
 ## Configuration (Laravel 4)
 
-Run `php artisan config:publish thujohn/twitter` and modify the config file with your own informations.
+Run `php artisan config:publish shahrukhkhan/twitter` and modify the config file with your own informations.
 ```
 /app/config/packages/shahrukh/twitter/config.php
 ```
@@ -109,7 +109,7 @@ Returns a collection of the most recent Tweets posted by the user indicated by t
 ```php
 Route::get('/', function()
 {
-	return Twitter::getUserTimeline(['screen_name' => 'thujohn', 'count' => 20, 'format' => 'json']);
+	return Twitter::getUserTimeline(['screen_name' => 'yebhidekho', 'count' => 20, 'format' => 'json']);
 });
 ```
 
