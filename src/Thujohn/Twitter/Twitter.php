@@ -74,23 +74,22 @@ class Twitter extends tmhOAuth {
 		$this->parent_config['token']           = $this->tconfig['ACCESS_TOKEN'];
 		$this->parent_config['secret']          = $this->tconfig['ACCESS_TOKEN_SECRET'];
 
-		if ($session->has('access_token'))
-		{
-			$access_token = $session->get('access_token');
+        if(\Auth::check()) {
+            $token                         = UserToken::where(['owner_id' => \Auth::user()->id, 'service' => 'twitter'])->first();
+            $this->parent_config['token']  = $token->token;
+            $this->parent_config['secret'] = $token->secret;
 
-			if (is_array($access_token) && isset($access_token['oauth_token']) && isset($access_token['oauth_token_secret']) && !empty($access_token['oauth_token']) && !empty($access_token['oauth_token_secret']))
-			{
-				$this->parent_config['token']  = $access_token['oauth_token'];
-				$this->parent_config['secret'] = $access_token['oauth_token_secret'];
-			}
-		}
+            $this->parent_config['use_ssl']    = $this->tconfig['USE_SSL'];
+            $this->parent_config['user_agent'] = 'LTTW ' . parent::VERSION;
 
-		$this->parent_config['use_ssl']    = $this->tconfig['USE_SSL'];
-		$this->parent_config['user_agent'] = 'LTTW '.parent::VERSION;
+            $config = array_merge($this->parent_config, $this->tconfig);
 
-		$config = array_merge($this->parent_config, $this->tconfig);
-
-		parent::__construct($this->parent_config);
+            parent::__construct($this->parent_config);
+        }
+        else
+        {
+            return redirect('login');
+        }
 	}
 
 	/**
