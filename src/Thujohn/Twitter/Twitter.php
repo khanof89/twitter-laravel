@@ -1,23 +1,23 @@
-<?php namespace Thujohn\Twitter;
+<?php namespace Shahrukh\Twitter;
 
 use Exception;
 use Carbon\Carbon as Carbon;
 use Illuminate\Session\Store as SessionStore;
 use tmhOAuth;
 
-use Thujohn\Twitter\Traits\AccountTrait;
-use Thujohn\Twitter\Traits\BlockTrait;
-use Thujohn\Twitter\Traits\DirectMessageTrait;
-use Thujohn\Twitter\Traits\FavoriteTrait;
-use Thujohn\Twitter\Traits\FriendshipTrait;
-use Thujohn\Twitter\Traits\GeoTrait;
-use Thujohn\Twitter\Traits\HelpTrait;
-use Thujohn\Twitter\Traits\ListTrait;
-use Thujohn\Twitter\Traits\MediaTrait;
-use Thujohn\Twitter\Traits\SearchTrait;
-use Thujohn\Twitter\Traits\StatusTrait;
-use Thujohn\Twitter\Traits\TrendTrait;
-use Thujohn\Twitter\Traits\UserTrait;
+use Shahrukh\Twitter\Traits\AccountTrait;
+use Shahrukh\Twitter\Traits\BlockTrait;
+use Shahrukh\Twitter\Traits\DirectMessageTrait;
+use Shahrukh\Twitter\Traits\FavoriteTrait;
+use Shahrukh\Twitter\Traits\FriendshipTrait;
+use Shahrukh\Twitter\Traits\GeoTrait;
+use Shahrukh\Twitter\Traits\HelpTrait;
+use Shahrukh\Twitter\Traits\ListTrait;
+use Shahrukh\Twitter\Traits\MediaTrait;
+use Shahrukh\Twitter\Traits\SearchTrait;
+use Shahrukh\Twitter\Traits\StatusTrait;
+use Shahrukh\Twitter\Traits\TrendTrait;
+use Shahrukh\Twitter\Traits\UserTrait;
 
 class Twitter extends tmhOAuth {
 

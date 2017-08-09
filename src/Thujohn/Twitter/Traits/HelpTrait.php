@@ -1,4 +1,4 @@
-<?php namespace Thujohn\Twitter\Traits;
+<?php namespace Shahrukh\Twitter\Traits;
 
 use Exception;
 

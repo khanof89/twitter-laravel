@@ -1,4 +1,4 @@
-<?php namespace Thujohn\Twitter\Facades;
+<?php namespace Shahrukh\Twitter\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

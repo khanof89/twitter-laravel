@@ -1,8 +1,8 @@
-<?php namespace Thujohn\Twitter;
+<?php namespace Shahrukh\Twitter;
 
 use Illuminate\Support\ServiceProvider;
 
-use Thujohn\Twitter\Twitter;
+use Shahrukh\Twitter\Twitter;
 
 class TwitterServiceProvider extends ServiceProvider {
 
